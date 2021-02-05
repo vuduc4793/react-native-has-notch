@@ -1,19 +1,33 @@
-#import "HasNotch.h"
+#import "HasNotch.h"
+#import <React/RCTLog.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@implementation HasNotch
+@interface HasNotch()
+@end
 
-RCT_EXPORT_MODULE()
+@implementation HasNotch
 
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-{
-  NSNumber *result = @([a floatValue] * [b floatValue]);
+RCT_EXPORT_MODULE(HasNotch)
 
-  resolve(result);
+RCT_EXPORT_METHOD(hasNotch){
+  dispatch_sync(dispatch_get_main_queue(), ^{
+//    [self hasTopNocth];
+  });
+}
+
+-(NSDictionary *)constantsToExport{
+  if (@available( iOS 11.0, * )) {
+      if ([[[UIApplication sharedApplication] keyWindow] safeAreaInsets].bottom > 0) {
+        return @{ @"hasNotch": @YES };
+      } else {
+        return @{ @"hasNotch": @NO };
+      }
+  } else {
+    return @{ @"hasNotch": @NO };
+  }
+  
 }
 
 @end
+

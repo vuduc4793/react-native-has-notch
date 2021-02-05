@@ -1,9 +1,9 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from "react-native";
 
 type HasNotchType = {
-  multiply(a: number, b: number): Promise<number>;
+  hasNotch: boolean;
 };
 
-const { HasNotch } = NativeModules;
+const HasNotch = NativeModules.HasNotch.getConstants();
 
 export default HasNotch as HasNotchType;

@@ -1,5 +1,11 @@
+
+#if __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#else
 #import <React/RCTBridgeModule.h>
+#endif
 
-@interface HasNotch : NSObject <RCTBridgeModule>
-
+@interface VnptEkyc : NSObject <RCTBridgeModule>
+- (void)showVnptEkycViewController;
+// -(void)initParamSdk;
 @end
