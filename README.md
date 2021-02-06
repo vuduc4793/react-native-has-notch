@@ -6,6 +6,7 @@
 
 ```sh
 npm install react-native-has-notch
+cd ios && pod install && cd..
 ```
 
 ## Usage
@@ -15,7 +16,7 @@ import HasNotch from "react-native-has-notch";
 
 // ...
 
-const result = await HasNotch.multiply(3, 7);
+HasNotch.hasNotch;
 ```
 
 ## Contributing
