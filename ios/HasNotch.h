@@ -5,7 +5,6 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface VnptEkyc : NSObject <RCTBridgeModule>
-- (void)showVnptEkycViewController;
-// -(void)initParamSdk;
+@interface HasNotch : NSObject <RCTBridgeModule>
+-(void)hasNotch;
 @end
