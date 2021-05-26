@@ -6,7 +6,7 @@
 
 ```sh
 npm install react-native-has-notch
-cd ios && pod install && cd..
+cd ios && pod install && cd ..
 ```
 
 ## Usage
