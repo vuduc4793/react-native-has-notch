@@ -1,6 +1,6 @@
 {
   "name": "react-native-has-notch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "cha co gi dac biet dau do isIPhoneX_deprecated khong hoat dong tren iphone 12",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
