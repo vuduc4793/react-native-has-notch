@@ -29,5 +29,10 @@ RCT_EXPORT_METHOD(hasNotch){
   
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
+
 @end
 
